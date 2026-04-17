@@ -105,7 +105,7 @@ export default function AddAction(){
     e.preventDefault();
     try{
       console.log('Submitting action:', { category, note });
-      const response = await api.post('/api/actions', { category, note });
+      const response = await api.post('/actions', { category, note });
       console.log('Action added successfully:', response.data);
       navigate('/');
     }catch(e){ 

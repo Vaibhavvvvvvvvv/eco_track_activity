@@ -13,7 +13,7 @@ export default function Login(){
   const submit = async (e) =>{
     e.preventDefault();
     try {
-      const res = await api.post('/api/auth/login', { email, password });
+      const res = await api.post('/auth/login', { email, password });
       if (res && res.data){
         localStorage.setItem('token', res.data.token);
         login(res.data.user);

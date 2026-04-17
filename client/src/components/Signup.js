@@ -15,7 +15,7 @@ export default function Signup(){
   const submit = async (e) =>{
     e.preventDefault();
     try {
-  const res = await api.post('/api/auth/signup', { name, email, password, avatar });
+  const res = await api.post('/auth/signup', { name, email, password, avatar });
       if (res && res.data){
         localStorage.setItem('token', res.data.token);
         login(res.data.user);
